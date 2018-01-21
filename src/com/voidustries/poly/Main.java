@@ -2,6 +2,8 @@ package com.voidustries.poly;
 
 // Class Created by Stone Monarch on 1/20/2018
 
+import com.voidustries.poly.GUI.GUI;
+
 import java.util.logging.*;
 
 public class Main {
@@ -10,6 +12,10 @@ public class Main {
 
     static {
         LOGGER.setLevel(Level.FINE);
+    }
+
+    public static void main(String[] args) {
+        GUI.gui();
     }
 
 }
