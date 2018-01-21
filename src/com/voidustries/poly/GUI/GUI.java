@@ -1,5 +1,7 @@
 package com.voidustries.poly.GUI;
 
+// Class Created by Stone Monarch on 1/20/2018
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +13,6 @@ import javafx.stage.Stage;
 import java.util.logging.Logger;
 
 public class GUI extends Application {
-
-    private static boolean launched = false;
 
     private static final Logger LOGGER = Logger.getLogger( GUI.class.getName() );
 
