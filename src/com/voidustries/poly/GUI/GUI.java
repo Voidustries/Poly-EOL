@@ -20,7 +20,7 @@ public class GUI extends Application {
     public void start (Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        Platform.setImplicitExit(false);
+        Platform.setImplicitExit(true);
 
         Scene scene = new Scene(root,450,450);
 
