@@ -17,6 +17,9 @@ public class Main {
 
         // Try to start the System Tray
 
-        SysTray.systray();
+        PolyThreads.startThread(1);
+
+        while (true)
+            System.out.println("1");
     }
 }
