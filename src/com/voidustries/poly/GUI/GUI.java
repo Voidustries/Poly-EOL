@@ -18,12 +18,11 @@ public class GUI extends Application {
     private static final Logger LOGGER = Logger.getLogger( GUI.class.getName() );
 
     private static Stage mainStage;
-    private static Parent root;
 
 
     @Override
     public void start (Stage primaryStage) throws Exception{
-        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         Platform.setImplicitExit(false);
 
