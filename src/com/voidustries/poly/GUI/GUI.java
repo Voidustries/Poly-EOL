@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class GUI extends Application {
@@ -20,7 +21,7 @@ public class GUI extends Application {
     public void start (Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        Platform.setImplicitExit(true);
+        Platform.setImplicitExit(false);
 
         Scene scene = new Scene(root,450,450);
 
@@ -34,6 +35,7 @@ public class GUI extends Application {
     }
 
     public static void gui () {
+        LOGGER.log(Level.FINE, "Launching GUI");
         launch();
     }
 }

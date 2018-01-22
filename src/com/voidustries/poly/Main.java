@@ -2,8 +2,6 @@ package com.voidustries.poly;
 
 // Class Created by Stone Monarch on 1/20/2018
 
-import com.voidustries.poly.GUI.GUI;
-
 import java.util.logging.*;
 
 public class Main {
@@ -15,10 +13,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // TODO Make a Splash
 
-        while (true) {
-            GUI.gui();
-        }
+        // Try to start the System Tray
+
+        SysTray.systray();
     }
-
 }
