@@ -17,9 +17,13 @@ public class GUI extends Application {
 
     private static final Logger LOGGER = Logger.getLogger( GUI.class.getName() );
 
+    private static Stage mainStage;
+    private static Parent root;
+
+
     @Override
     public void start (Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         Platform.setImplicitExit(false);
 
@@ -32,10 +36,19 @@ public class GUI extends Application {
         primaryStage.setTitle("Poly");
         primaryStage.setScene(scene);
         primaryStage.show();
+        mainStage = primaryStage;
     }
 
-    public static void gui () {
+    private static void show() {
+        Platform.runLater(() -> mainStage.show());
+    }
+
+    public static void LaunchGUI () {
         LOGGER.log(Level.FINE, "Launching GUI");
-        launch();
+        try {
+            launch();
+        } catch (IllegalStateException e) {
+            show();
+        }
     }
 }
