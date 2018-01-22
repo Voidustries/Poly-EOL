@@ -16,7 +16,7 @@ public class SysTray {
 
         SystemTray systemTray = SystemTray.getSystemTray();
 
-        Image image = Toolkit.getDefaultToolkit().getImage("src/com/voidustries/poly/assets/icon.png");
+        Image image = Toolkit.getDefaultToolkit().getImage("src/com/voidustries/poly/assets/Icon.png");
 
         PopupMenu trayPopupMenu = new PopupMenu();
 
@@ -28,7 +28,7 @@ public class SysTray {
         close.addActionListener(e -> System.exit(1));
         trayPopupMenu.add(close);
 
-        TrayIcon trayIcon = new TrayIcon(image, "SystemTray Demo", trayPopupMenu);
+        TrayIcon trayIcon = new TrayIcon(image, "Poly", trayPopupMenu);
 
         trayIcon.setImageAutoSize(true);
 
