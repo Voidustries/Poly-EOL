@@ -106,7 +106,7 @@
     <Separator GridPane.columnIndex="0"
                GridPane.columnSpan="4"
                GridPane.rowIndex="6"
-               orientation="HORIZONTAL"/>
+    />
 
     <!-- Log Panel-->
 
@@ -121,7 +121,7 @@
               GridPane.rowSpan="3"
               editable="false"
               focusTraversable="false"
-              visible="true" />
+    />
 
     <!-- Choice Buttons -->
 
