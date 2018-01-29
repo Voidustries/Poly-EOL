@@ -25,7 +25,7 @@ public class SysTray {
         trayPopupMenu.add(action);
 
         MenuItem close = new MenuItem("Close");
-        close.addActionListener(e -> System.exit(1));
+        close.addActionListener(e -> PolyThreads.startShutdown());
         trayPopupMenu.add(close);
 
         TrayIcon trayIcon = new TrayIcon(image, "Poly", trayPopupMenu);

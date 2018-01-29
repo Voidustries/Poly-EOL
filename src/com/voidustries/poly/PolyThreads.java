@@ -16,4 +16,9 @@ public class PolyThreads {
                     break;
         }
     }
+
+    public static void startShutdown() {
+        System.out.println("Shutting down....");
+        System.exit(1);
+    }
 }
