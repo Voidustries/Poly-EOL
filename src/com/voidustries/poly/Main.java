@@ -6,20 +6,17 @@ import java.util.logging.*;
 
 public class Main {
 
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
-
-    static {
-        LOGGER.setLevel(Level.FINE);
-    }
+    private static Logger LOGGER = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
+
+        LOGGER.setLevel(Level.FINE);
+
+        LOGGER.fine("Logger started");
         // TODO Make a Splash
 
         // Try to start the System Tray
 
         PolyThreads.startThread(1);
-
-        while (true)
-            System.out.println("1");
     }
 }
