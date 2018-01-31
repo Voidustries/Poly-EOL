@@ -7,7 +7,7 @@ HEVC and then switch to 1080p or 720p.
 
 ![Usage](src/com/voidustries/poly/assets/readme/Usage.png)
 
-* Fill this out after fist version
+* `Fill this out after first version`
 
 ![Contributing](src/com/voidustries/poly/assets/readme/Contributing.png)
 
