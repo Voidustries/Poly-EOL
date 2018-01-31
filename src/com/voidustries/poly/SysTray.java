@@ -6,9 +6,9 @@ public class SysTray {
 
     public static void systray() {
 
-        if(!SystemTray.isSupported()){
-            Main.LOGGER.warning("Systemtray Not Supported!!!!");
-            return ;
+        if (!SystemTray.isSupported()) {
+            Main.LOGGER.warning("SysTray not supported!");
+            return;
         }
 
         SystemTray systemTray = SystemTray.getSystemTray();
@@ -26,13 +26,12 @@ public class SysTray {
         trayPopupMenu.add(close);
 
         TrayIcon trayIcon = new TrayIcon(image, "Poly", trayPopupMenu);
-
         trayIcon.setImageAutoSize(true);
 
-        try{
+        try {
             systemTray.add(trayIcon);
-        }catch(AWTException awtException){
-            awtException.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

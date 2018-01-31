@@ -18,7 +18,6 @@ public class Main {
         // TODO Make a Splash
 
         // Try to start the System Tray
-
         PolyThreads.startThread(1);
     }
 }

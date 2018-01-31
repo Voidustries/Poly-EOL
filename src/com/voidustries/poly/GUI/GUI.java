@@ -16,12 +16,12 @@ public class GUI extends Application {
 
 
     @Override
-    public void start (Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         Platform.setImplicitExit(false);
 
-        Scene scene = new Scene(root,450,450);
+        Scene scene = new Scene(root, 450, 450);
 
         Image applicationIcon = new Image(getClass().getResourceAsStream("assets/icon.png"));
         primaryStage.getIcons().add(applicationIcon);
@@ -37,7 +37,7 @@ public class GUI extends Application {
         Platform.runLater(() -> mainStage.show());
     }
 
-    public static void LaunchGUI () {
+    public static void LaunchGUI() {
         Main.LOGGER.info("Launching GUI");
         try {
             launch();
