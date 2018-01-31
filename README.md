@@ -23,10 +23,10 @@ HEVC and then switch to 1080p or 720p.
 
 ![Future Plans](src/com/voidustries/poly/assets/readme/FuturePlans.png)
 
-* Add Movies from Email request
-* Add TV Shows from Email request
-* Sync with TheTDB
-* Show renaming
+- [ ] Add Movies from Email request.  
+- [ ] Add TV Shows from Email request.  
+- [ ] Sync with TheTDB.
+- [ ] Allow for renaming.
 
 ![Credits](src/com/voidustries/poly/assets/readme/Credits.png)
 
