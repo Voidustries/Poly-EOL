@@ -2,6 +2,7 @@ package com.voidustries.poly.GUI;
 
 // Class Created by Stone Monarch on 1/20/2018
 
+import com.voidustries.poly.Main;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -10,13 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class GUI extends Application {
-
-    private static final Logger LOGGER = Logger.getLogger( GUI.class.getName() );
-
     private static Stage mainStage;
 
 
@@ -43,7 +38,7 @@ public class GUI extends Application {
     }
 
     public static void LaunchGUI () {
-        LOGGER.log(Level.FINE, "Launching GUI");
+        Main.LOGGER.info("Launching GUI");
         try {
             launch();
         } catch (IllegalStateException e) {

@@ -7,7 +7,7 @@ public class SysTray {
     public static void systray() {
 
         if(!SystemTray.isSupported()){
-            Main.logging(4, "Systemtray Not Supported!!!!");
+            Main.LOGGER.warning("Systemtray Not Supported!!!!");
             return ;
         }
 

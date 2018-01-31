@@ -9,16 +9,18 @@ public class PolyThreads {
         switch (threadNum) {
             case 1: Thread sysTrayTh = new Thread(SysTray::systray);
                     sysTrayTh.start();
-                    Main.logging(1, "System Tray Starting...");
+                    Main.LOGGER.entering("SysTray","Starting Systray");
                     break;
 
             case 2: Thread guiTh = new Thread(GUI::LaunchGUI);
                     guiTh.start();
+                    Main.LOGGER.entering("GUI","Starting GUI");
                     break;
         }
     }
 
     public static void startShutdown() {
+        Main.LOGGER.exiting("PolyThreads","Starting Systray");
         System.out.println("Shutting down....");
         System.exit(1);
     }
