@@ -1,8 +1,7 @@
-package com.voidustries.poly.GUI;
+package com.voidustries.poly;
 
 // Class Created by Stone Monarch on 1/20/2018
 
-import com.voidustries.poly.Main;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -33,16 +32,12 @@ public class GUI extends Application {
         mainStage = primaryStage;
     }
 
-    private static void show() {
-        Platform.runLater(() -> mainStage.show());
-    }
-
     public static void LaunchGUI() {
         Main.LOGGER.info("Launching GUI");
         try {
             launch();
         } catch (IllegalStateException e) {
-            show();
+            Platform.runLater(() -> mainStage.show());
         }
     }
 }
