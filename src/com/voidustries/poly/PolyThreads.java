@@ -9,6 +9,7 @@ public class PolyThreads {
         switch (threadNum) {
             case 1: Thread sysTrayTh = new Thread(SysTray::systray);
                     sysTrayTh.start();
+                    Main.logging(1, "System Tray Starting...");
                     break;
 
             case 2: Thread guiTh = new Thread(GUI::LaunchGUI);

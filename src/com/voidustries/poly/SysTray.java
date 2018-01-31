@@ -1,16 +1,13 @@
 package com.voidustries.poly;
 
 import java.awt.*;
-import java.util.logging.Logger;
 
 public class SysTray {
-
-    private static final Logger LOGGER = Logger.getLogger( System.class.getName() );
 
     public static void systray() {
 
         if(!SystemTray.isSupported()){
-            System.out.println("System tray is not supported !!! ");
+            Main.logging(4, "Systemtray Not Supported!!!!");
             return ;
         }
 
