@@ -1,4 +1,4 @@
-package com.voidustries.poly.GUI;
+package com.voidustries.poly;
 
 // Class Created by Stone Monarch on 1/20/2018
 
