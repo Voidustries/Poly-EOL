@@ -2,18 +2,23 @@ package com.voidustries.poly;
 
 // Class Created by Stone Monarch on 1/20/2018
 
+import java.io.IOException;
 import java.util.logging.*;
 
 public class Main {
 
     public final static Logger LOGGER = Logger.getLogger(Main.class.getName());
-    private final static ConsoleHandler CONSOLE_HANDLER = new ConsoleHandler();
 
-    public static void main(String[] args) {
-
-        LOGGER.setLevel(Level.ALL);
-        CONSOLE_HANDLER.setLevel(Level.ALL);
+    public static void main(String[] args) throws IOException {
+        ConsoleHandler CONSOLE_HANDLER = new ConsoleHandler();
+        FileHandler FILE_HANDLER = new FileHandler("PolyLogFile.log");
+        Formatter FORMATTER = new CustomFormatter();
         LOGGER.addHandler(CONSOLE_HANDLER);
+        CONSOLE_HANDLER.setLevel(Level.ALL);
+        FILE_HANDLER.setLevel(Level.ALL);
+        LOGGER.addHandler(FILE_HANDLER);
+        FILE_HANDLER.setFormatter(FORMATTER);
+        LOGGER.setLevel(Level.ALL);
         LOGGER.setUseParentHandlers(false);
 
         // TODO Make a Splash
