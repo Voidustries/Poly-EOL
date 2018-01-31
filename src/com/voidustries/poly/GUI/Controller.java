@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 public class Controller {
 
     public void apply(MouseEvent mouseEvent) {
-        Main.LOGGER.warning("Hella");
+        Main.LOGGER.info("Apply Clicked");
+        System.out.println("Apply Clicked");
     }
 }

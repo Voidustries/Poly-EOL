@@ -8,15 +8,15 @@ public class PolyThreads {
 
         switch (threadNum) {
             case 1:
+                Main.LOGGER.entering("SysTray", "Starting Systray...");
                 Thread sysTrayTh = new Thread(SysTray::systray);
                 sysTrayTh.start();
-                Main.LOGGER.entering("SysTray", "Starting Systray...");
                 break;
 
             case 2:
+                Main.LOGGER.entering("GUI", "Starting GUI...");
                 Thread guiTh = new Thread(GUI::LaunchGUI);
                 guiTh.start();
-                Main.LOGGER.entering("GUI", "Starting GUI...");
                 break;
 
             default:
