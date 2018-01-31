@@ -3,6 +3,7 @@ package com.voidustries.poly;
 // Class Created by Stone Monarch on 1/20/2018
 
 import java.util.logging.ConsoleHandler;
+import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,6 +17,7 @@ public class Main {
         LOGGER.setLevel(Level.ALL);
         CONSOLE_HANDLER.setLevel(Level.ALL);
         LOGGER.addHandler(CONSOLE_HANDLER);
+        LOGGER.setUseParentHandlers(false);
 
         // TODO Make a Splash
 
