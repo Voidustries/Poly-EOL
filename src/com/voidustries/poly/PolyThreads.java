@@ -1,7 +1,5 @@
 package com.voidustries.poly;
 
-import com.voidustries.poly.GUI.GUI;
-
 public class PolyThreads {
 
     public static void startThread(int threadNum) {
