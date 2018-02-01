@@ -7,7 +7,7 @@ HEVC and then switch to 1080p or 720p.
 
 ![Usage](src/com/voidustries/poly/img/readme/Usage.png)
 
-* Fill this out after fist version
+* `Fill this out after first version`
 
 ![Contributing](src/com/voidustries/poly/img/readme/Contributing.png)
 
@@ -15,7 +15,7 @@ HEVC and then switch to 1080p or 720p.
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+5. Submit a pull request! :smile:
 
 ![History](src/com/voidustries/poly/img/readme/History.png)
 
@@ -23,10 +23,10 @@ HEVC and then switch to 1080p or 720p.
 
 ![Future Plans](src/com/voidustries/poly/img/readme/FuturePlans.png)
 
-* Add Movies from Email request
-* Add TV Shows from Email request
-* Sync with TheTDB
-* Show renaming
+- [ ] Add Movies from Email request.  
+- [ ] Add TV Shows from Email request.  
+- [ ] Sync with TheTDB.
+- [ ] Allow for renaming.
 
 ![Credits](src/com/voidustries/poly/img/readme/Credits.png)
 
