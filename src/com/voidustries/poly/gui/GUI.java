@@ -1,7 +1,14 @@
-package com.voidustries.poly;
+package com.voidustries.poly.gui;
 
-// Class Created by Stone Monarch on 1/20/2018
+/*
+Class Created by Stone Monarch on 1/20/2018
 
+Creator Comments:
+
+        Launches the main settings GUI and loads the previous settings, OR Runs first time setup if needed
+*/
+
+import com.voidustries.poly.Main;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +20,11 @@ import javafx.stage.Stage;
 public class GUI extends Application {
     private static Stage mainStage;
 
+    static {
+        // TODO: Load Previous Settings
+        // TODO: Make First Time Setup and Run If Needed
+    }
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -20,9 +32,9 @@ public class GUI extends Application {
 
         Platform.setImplicitExit(false);
 
-        Scene scene = new Scene(root, 450, 450);
+        Scene scene = new Scene(root, 472, 450);
 
-        Image applicationIcon = new Image(getClass().getResourceAsStream("assets/icon.png"));
+        Image applicationIcon = new Image(getClass().getResourceAsStream("icon.png"));
         primaryStage.getIcons().add(applicationIcon);
 
         primaryStage.setResizable(false);
@@ -39,5 +51,9 @@ public class GUI extends Application {
         } catch (IllegalStateException e) {
             Platform.runLater(() -> mainStage.show());
         }
+    }
+
+    public static Stage getMainStage() {
+        return mainStage;
     }
 }
