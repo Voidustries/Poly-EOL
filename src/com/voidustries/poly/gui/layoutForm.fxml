@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="com.voidustries.poly.Controller"
+          fx:controller="com.voidustries.poly.gui.Controller"
           alignment="CENTER" hgap="10"
           vgap="10">
 
@@ -24,6 +24,7 @@
            GridPane.columnIndex="0"
            GridPane.rowIndex="0"/>
     <TextField fx:id="rss_url"
+               GridPane.columnSpan="2"
                GridPane.columnIndex="0"
                GridPane.rowIndex="1"/>
     <Label text="Database Location:"
@@ -32,16 +33,24 @@
     <TextField fx:id="database_location"
                GridPane.columnIndex="0"
                GridPane.rowIndex="3"/>
+    <Button onMouseClicked="#dbDirChooser"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="3"
+            text="..."/>
     <Label text="TV Show DIR:"
            GridPane.columnIndex="0"
            GridPane.rowIndex="4"/>
     <TextField fx:id="show_dir"
                GridPane.columnIndex="0"
                GridPane.rowIndex="5"/>
+    <Button onMouseClicked="#showDirChooser"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="5"
+            text="..."/>
 
     <!-- V Separator -->
 
-    <Separator GridPane.columnIndex="1"
+    <Separator GridPane.columnIndex="2"
                GridPane.rowIndex="0"
                GridPane.rowSpan="6"
                orientation="VERTICAL"/>
@@ -50,13 +59,13 @@
 
     <Text text="Update RSS Every X Hours"
           textAlignment="RIGHT"
-          GridPane.columnIndex="2"
+          GridPane.columnIndex="3"
           GridPane.rowIndex="1"/>
     <Spinner fx:id="rss_timer"
              editable="true"
              initialValue="1"
-             maxWidth="100"
-             GridPane.columnIndex="3"
+             maxWidth="60"
+             GridPane.columnIndex="4"
              GridPane.rowIndex="1">
         <valueFactory>
             <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="100"/>
@@ -65,12 +74,12 @@
 
     <Text text="Try Downloads Every X Hours"
           textAlignment="RIGHT"
-          GridPane.columnIndex="2"
+          GridPane.columnIndex="3"
           GridPane.rowIndex="2"/>
     <Spinner fx:id="download_timer"
              editable="true"
-             maxWidth="100"
-             GridPane.columnIndex="3"
+             maxWidth="60"
+             GridPane.columnIndex="4"
              GridPane.rowIndex="2">
         <valueFactory>
             <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="100"/>
@@ -79,12 +88,12 @@
 
     <Text text="Switch To F2 After X Tries"
           textAlignment="RIGHT"
-          GridPane.columnIndex="2"
+          GridPane.columnIndex="3"
           GridPane.rowIndex="3"/>
     <Spinner fx:id="f2_after"
              editable="true"
-             maxWidth="100"
-             GridPane.columnIndex="3"
+             maxWidth="60"
+             GridPane.columnIndex="4"
              GridPane.rowIndex="3">
         <valueFactory>
             <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="100"/>
@@ -93,18 +102,19 @@
 
     <HBox spacing="10"
           alignment="CENTER"
-          GridPane.columnIndex="2"
-          GridPane.columnSpan="2"
+          GridPane.columnIndex="3"
+          GridPane.columnSpan="3"
           GridPane.rowIndex="4"
           GridPane.rowSpan="2">
 
-        <Button text="F2 Setup"/>
+        <Button text="F2 Setup"
+                onMouseClicked="#setupSecondFilter"/>
     </HBox>
 
     <!-- H Separator -->
 
     <Separator GridPane.columnIndex="0"
-               GridPane.columnSpan="4"
+               GridPane.columnSpan="5"
                GridPane.rowIndex="6"
     />
 
@@ -112,11 +122,11 @@
 
     <Text text="Log:"
           GridPane.columnIndex="0"
-          GridPane.rowIndex="7"/>
+          GridPane.rowIndex="8"/>
 
     <TextArea fx:id="logField"
               GridPane.columnIndex="0"
-              GridPane.columnSpan="4"
+              GridPane.columnSpan="5"
               GridPane.rowIndex="8"
               GridPane.rowSpan="3"
               editable="false"
@@ -128,14 +138,14 @@
     <HBox spacing="10"
           alignment="BOTTOM_RIGHT"
           GridPane.columnIndex="0"
-          GridPane.columnSpan="4"
+          GridPane.columnSpan="5"
           GridPane.rowIndex="12">
 
         <Button text="Apply"
                 fx:id="apply"
-                onMousePressed="#apply"/>
+                onMouseClicked="#onApply"/>
         <Button text="Cancel"
-                fx:id="cancel"/>
+                onMouseClicked="#onCancel"/>
 
     </HBox>
 
