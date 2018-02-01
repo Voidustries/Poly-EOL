@@ -1,5 +1,14 @@
 package com.voidustries.poly;
-// Class Created by Stone Monarch on 1/30/2018
+
+/*
+Class Created by Stone Monarch on 1/30/2018
+
+Creator Comments:
+
+        Formatter to keep a logfile in a easy to read format for quick DEBUGGING.
+
+        Formatted as "dd/MM/yyyy hh:mm:ss:SSS - [*Level*} - [*SourceClassName.SourceMethodName*] - *Message*"
+*/
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
