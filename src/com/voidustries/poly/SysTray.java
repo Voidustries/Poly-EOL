@@ -1,5 +1,15 @@
 package com.voidustries.poly;
 
+/*
+Class Created by Stone Monarch on 1/30/2018
+
+Creator Comments:
+
+        Creates a basic SystemTray to show that Poly is running and allows the GUI
+        tobe launched at anytime, while also allowing the Shutdown to be called at
+        anytime.
+*/
+
 import java.awt.*;
 
 public class SysTray {
@@ -13,7 +23,7 @@ public class SysTray {
 
         SystemTray systemTray = SystemTray.getSystemTray();
 
-        Image image = Toolkit.getDefaultToolkit().getImage("src/com/voidustries/poly/assets/Icon.png");
+        Image image = Toolkit.getDefaultToolkit().getImage("src/com/voidustries/poly/img/Icon.png");
 
         PopupMenu trayPopupMenu = new PopupMenu();
 
