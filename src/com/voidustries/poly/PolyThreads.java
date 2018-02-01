@@ -1,5 +1,16 @@
 package com.voidustries.poly;
 
+/*
+Class Created by Stone Monarch on 1/30/2018
+
+Creator Comments:
+
+        Keeps track of all running threads and can be called to shutdown all at once being sure
+        not to exit in the middle of a process.
+*/
+
+import com.voidustries.poly.gui.GUI;
+
 public class PolyThreads {
 
     public static void startThread(int threadNum) {
