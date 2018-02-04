@@ -30,7 +30,7 @@
     <Label text="Database Location:"
            GridPane.columnIndex="0"
            GridPane.rowIndex="2"/>
-    <TextField fx:id="database_location"
+    <TextField fx:id="database_dir"
                GridPane.columnIndex="0"
                GridPane.rowIndex="3"/>
     <Button onMouseClicked="#dbDirChooser"
@@ -61,7 +61,7 @@
           textAlignment="RIGHT"
           GridPane.columnIndex="3"
           GridPane.rowIndex="1"/>
-    <Spinner fx:id="rss_timer"
+    <Spinner fx:id="rss_update"
              editable="true"
              initialValue="1"
              maxWidth="60"
@@ -76,7 +76,7 @@
           textAlignment="RIGHT"
           GridPane.columnIndex="3"
           GridPane.rowIndex="2"/>
-    <Spinner fx:id="download_timer"
+    <Spinner fx:id="download_update"
              editable="true"
              maxWidth="60"
              GridPane.columnIndex="4"
@@ -142,7 +142,6 @@
           GridPane.rowIndex="12">
 
         <Button text="Apply"
-                fx:id="apply"
                 onMouseClicked="#onApply"/>
         <Button text="Cancel"
                 onMouseClicked="#onCancel"/>
