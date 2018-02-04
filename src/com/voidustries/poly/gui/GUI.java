@@ -20,11 +20,6 @@ import javafx.stage.Stage;
 public class GUI extends Application {
     private static Stage mainStage;
 
-    static {
-        // TODO: Load Previous Settings
-        // TODO: Make First Time Setup and Run If Needed
-    }
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {
