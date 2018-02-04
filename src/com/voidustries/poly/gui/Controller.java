@@ -39,6 +39,22 @@ public class Controller {
     @FXML
     private TextArea logField;
 
+    public Controller () {
+            Properties loadProps = new Properties();
+            try {
+                FileInputStream fis = new FileInputStream("settings.xml");
+                if (fis.available() > 0) {
+                    loadProps.loadFromXML(fis);
+                }
+                if (rss_url != null) {
+                    rss_url.setText(loadProps.getProperty("rss_url"));
+                }
+                fis.close();
+            } catch (IOException e) {
+                Main.LOGGER.warning("CANNOT LOAD FILE " + e);
+            }
+    }
+
     @FXML
     private void onApply(MouseEvent mouseEvent) {
         Main.LOGGER.info("Apply Clicked");
@@ -105,16 +121,5 @@ public class Controller {
         Main.LOGGER.entering("FilterGUI", "Starting Filter GUI...");
 
         // TODO: Make Filter Setup GUI
-    }
-
-    {
-        Properties loadProps = new Properties();
-        try {
-            loadProps.loadFromXML(new FileInputStream("settings.xml"));
-
-            rss_url.setText(loadProps.getProperty("rss_url"));
-        } catch (IOException e) {
-            Main.LOGGER.warning("CANNOT LOAD FILE " + e);
-        }
     }
 }
