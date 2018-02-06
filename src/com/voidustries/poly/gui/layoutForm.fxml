@@ -141,7 +141,7 @@
           GridPane.columnIndex="0"
           GridPane.rowIndex="8"/>
 
-    <Text text="%number_in_database"
+    <Text text="number_in_database"
           GridPane.columnIndex="1"
           GridPane.rowIndex="8"/>
 
@@ -149,7 +149,7 @@
           GridPane.columnIndex="0"
           GridPane.rowIndex="9"/>
 
-    <Text text="%shows_left"
+    <Text text="shows_left"
           GridPane.columnIndex="1"
           GridPane.rowIndex="9"/>
 

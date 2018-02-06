@@ -33,14 +33,4 @@ public class CustomFormatter extends java.util.logging.Formatter {
         return builder.toString();
     }
 
-    @Override
-    public String getHead(Handler h) {
-        return super.getHead(h);
-    }
-
-    @Override
-    public String getTail(Handler h) {
-        return super.getTail(h);
-    }
-
 }
