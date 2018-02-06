@@ -23,10 +23,10 @@ HEVC and then switch to 1080p or 720p.
 
 ![Future Plans](img/readme/FuturePlans.png)
 
-- [ ] Add Movies from Email request.  
-- [ ] Add TV Shows from Email request.  
-- [ ] Sync with TheTDB.
-- [ ] Allow for renaming.
+- [ ] Add TV Shows from Mobile App OR Desktop App.
+- [ ] Allow Poly to directly download torrents rather than a external program.
+- [ ] Sync with TheTVDB for Show renaming.
+- [ ] Sync with TheTVDB for meta data.
 
 ![Credits](img/readme/Credits.png)
 
