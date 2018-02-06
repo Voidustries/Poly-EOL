@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.*?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1"
           fx:controller="com.voidustries.poly.gui.Controller"
           alignment="CENTER" hgap="10"
