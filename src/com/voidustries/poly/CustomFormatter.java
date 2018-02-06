@@ -13,7 +13,6 @@ Creator Comments:
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
 public class CustomFormatter extends java.util.logging.Formatter {
