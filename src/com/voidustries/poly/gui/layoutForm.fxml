@@ -24,6 +24,7 @@
            GridPane.columnIndex="0"
            GridPane.rowIndex="0"/>
     <TextField fx:id="rss_url"
+               text="%rss_url"
                GridPane.columnSpan="2"
                GridPane.columnIndex="0"
                GridPane.rowIndex="1"/>
@@ -31,6 +32,7 @@
            GridPane.columnIndex="0"
            GridPane.rowIndex="2"/>
     <TextField fx:id="database_dir"
+               text="%database_dir"
                GridPane.columnIndex="0"
                GridPane.rowIndex="3"/>
     <Button onMouseClicked="#dbDirChooser"
@@ -41,6 +43,7 @@
            GridPane.columnIndex="0"
            GridPane.rowIndex="4"/>
     <TextField fx:id="show_dir"
+               text="%show_dir"
                GridPane.columnIndex="0"
                GridPane.rowIndex="5"/>
     <Button onMouseClicked="#showDirChooser"
@@ -63,12 +66,14 @@
           GridPane.rowIndex="1"/>
     <Spinner fx:id="rss_update"
              editable="true"
-             initialValue="1"
+             minWidth="60"
              maxWidth="60"
              GridPane.columnIndex="4"
              GridPane.rowIndex="1">
         <valueFactory>
-            <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="100"/>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory min="1"
+                                                            max="100"
+                                                            initialValue="%rss_update"/>
         </valueFactory>
     </Spinner>
 
@@ -78,11 +83,14 @@
           GridPane.rowIndex="2"/>
     <Spinner fx:id="download_update"
              editable="true"
+             minWidth="60"
              maxWidth="60"
              GridPane.columnIndex="4"
              GridPane.rowIndex="2">
         <valueFactory>
-            <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="100"/>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory min="1"
+                                                            max="100"
+                                                            initialValue="%download_update"/>
         </valueFactory>
     </Spinner>
 
@@ -92,11 +100,14 @@
           GridPane.rowIndex="3"/>
     <Spinner fx:id="f2_after"
              editable="true"
+             minWidth="60"
              maxWidth="60"
              GridPane.columnIndex="4"
              GridPane.rowIndex="3">
         <valueFactory>
-            <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="100"/>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory min="1"
+                                                            max="100"
+                                                            initialValue="%f2"/>
         </valueFactory>
     </Spinner>
 
@@ -105,10 +116,10 @@
           GridPane.columnIndex="3"
           GridPane.columnSpan="3"
           GridPane.rowIndex="4"
-          GridPane.rowSpan="2">
+          GridPane.rowSpan="1">
 
         <Button text="F2 Setup"
-                onMouseClicked="#setupSecondFilter"/>
+                onMouseClicked="#setF2"/>
     </HBox>
 
     <!-- H Separator -->
@@ -118,20 +129,29 @@
                GridPane.rowIndex="6"
     />
 
-    <!-- Log Panel-->
+    <!-- Log Panel -->
 
-    <Text text="Log:"
+    <!-- TODO: Make Into INFO panel -->
+
+    <Text text="Info:"
+          GridPane.columnIndex="0"
+          GridPane.rowIndex="7"/>
+
+    <Text text="Number of shows in Database: "
           GridPane.columnIndex="0"
           GridPane.rowIndex="8"/>
 
-    <TextArea fx:id="logField"
-              GridPane.columnIndex="0"
-              GridPane.columnSpan="5"
-              GridPane.rowIndex="8"
-              GridPane.rowSpan="3"
-              editable="false"
-              focusTraversable="false"
-    />
+    <Text text="%number_in_database"
+          GridPane.columnIndex="1"
+          GridPane.rowIndex="8"/>
+
+    <Text text="Number of shows left to download: "
+          GridPane.columnIndex="0"
+          GridPane.rowIndex="9"/>
+
+    <Text text="%shows_left"
+          GridPane.columnIndex="1"
+          GridPane.rowIndex="9"/>
 
     <!-- Choice Buttons -->
 
