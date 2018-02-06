@@ -17,17 +17,36 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class GUI extends Application {
-    private static Stage mainStage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
 
+public class GUI extends Application {
+
+    private static Stage mainStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("layoutForm.fxml"));
+        String settings = "settings.properties";
+        File f = new File(settings);
+
+        if (!f.exists()) {
+            makeDefaults();
+        }
+        FXMLLoader loader = new FXMLLoader();
+        FileInputStream fis = new FileInputStream(settings);
+        ResourceBundle resourceBundle = new PropertyResourceBundle(fis);
+        loader.setResources(resourceBundle);
+
+        Parent root = loader.load(getClass().getResourceAsStream("layoutForm.fxml"));
 
         Platform.setImplicitExit(false);
 
-        Scene scene = new Scene(root, 472, 450);
+        Scene scene = new Scene(root/*, 472, 450*/);
 
         Image applicationIcon = new Image(getClass().getResourceAsStream("icon.png"));
         primaryStage.getIcons().add(applicationIcon);
@@ -37,6 +56,7 @@ public class GUI extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
         mainStage = primaryStage;
+
     }
 
     public static void LaunchGUI() {
@@ -50,5 +70,22 @@ public class GUI extends Application {
 
     public static Stage getMainStage() {
         return mainStage;
+    }
+
+    private static void makeDefaults() {
+        try {
+            Properties makeDefaultProps = new Properties();
+            makeDefaultProps.setProperty("rss_url", "");
+            makeDefaultProps.setProperty("database_dir", "");
+            makeDefaultProps.setProperty("show_dir", "");
+            makeDefaultProps.setProperty("rss_update", "1");
+            makeDefaultProps.setProperty("download_update", "1");
+            makeDefaultProps.setProperty("f2", "48");
+            makeDefaultProps.setProperty("shows_left", "");
+            makeDefaultProps.setProperty("number_in_database", "");
+            makeDefaultProps.store(new FileOutputStream("settings.properties"), "");
+        } catch (IOException e) {
+            Main.LOGGER.warning("CANNOT CREATE DEFAULT SETTINGS FILE: " + e);
+        }
     }
 }
