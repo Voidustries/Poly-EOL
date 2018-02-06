@@ -81,8 +81,6 @@ public class GUI extends Application {
             makeDefaultProps.setProperty("rss_update", "1");
             makeDefaultProps.setProperty("download_update", "1");
             makeDefaultProps.setProperty("f2", "48");
-            makeDefaultProps.setProperty("shows_left", "");
-            makeDefaultProps.setProperty("number_in_database", "");
             makeDefaultProps.store(new FileOutputStream("settings.properties"), "");
         } catch (IOException e) {
             Main.LOGGER.warning("CANNOT CREATE DEFAULT SETTINGS FILE: " + e);
