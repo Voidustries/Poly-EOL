@@ -1,9 +1,9 @@
 ![Poly](img/readme/Title.png)
 
 Poly is a web scraping program that allows automatic download of TV Shows from a
-subscribed RSS feed. Poly creates a database and keeps track of what you already
+subscribed RSS feed. Poly creates a database to keep track of what you already
 have downloaded and does not download duplicates. Downloads will try for 1080p
-HEVC and then switch to 1080p or 720p.
+HEVC and then switch to 1080p or 720p after a specified number of attempts.
 
 ![Usage](img/readme/Usage.png)
 
