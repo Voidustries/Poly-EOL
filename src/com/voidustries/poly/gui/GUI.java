@@ -76,6 +76,8 @@ public class GUI extends Application {
         try {
             Properties makeDefaultProps = new Properties();
             makeDefaultProps.setProperty("rss_url", "");
+            makeDefaultProps.setProperty("shows_left", "");
+            makeDefaultProps.setProperty("shows_in_database" , "");
             makeDefaultProps.setProperty("database_dir", "");
             makeDefaultProps.setProperty("show_dir", "");
             makeDefaultProps.setProperty("rss_update", "1");
