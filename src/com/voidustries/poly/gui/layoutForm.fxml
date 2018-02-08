@@ -25,20 +25,24 @@
            GridPane.rowIndex="0"/>
     <TextField fx:id="rss_url"
                text="%rss_url"
-               GridPane.columnSpan="2"
                GridPane.columnIndex="0"
                GridPane.rowIndex="1"/>
+    <Button onMouseClicked="#checkRSSURL"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="1"
+            text="Check"/>
     <Label text="Database Location:"
            GridPane.columnIndex="0"
            GridPane.rowIndex="2"/>
     <TextField fx:id="database_dir"
                text="%database_dir"
+               minWidth="200"
                GridPane.columnIndex="0"
                GridPane.rowIndex="3"/>
     <Button onMouseClicked="#dbDirChooser"
             GridPane.columnIndex="1"
             GridPane.rowIndex="3"
-            text="..."/>
+            text="Browse"/>
     <Label text="TV Show DIR:"
            GridPane.columnIndex="0"
            GridPane.rowIndex="4"/>
@@ -49,7 +53,7 @@
     <Button onMouseClicked="#showDirChooser"
             GridPane.columnIndex="1"
             GridPane.rowIndex="5"
-            text="..."/>
+            text="Browse"/>
 
     <!-- V Separator -->
 
@@ -139,18 +143,22 @@
 
     <Text text="Number of shows in Database: "
           GridPane.columnIndex="0"
+          GridPane.columnSpan="2"
           GridPane.rowIndex="8"/>
 
-    <Text text="number_in_database"
-          GridPane.columnIndex="1"
+    <Text text="%shows_in_database"
+          GridPane.columnIndex="2"
+          GridPane.columnSpan="2"
           GridPane.rowIndex="8"/>
 
     <Text text="Number of shows left to download: "
           GridPane.columnIndex="0"
+          GridPane.columnSpan="2"
           GridPane.rowIndex="9"/>
 
-    <Text text="shows_left"
-          GridPane.columnIndex="1"
+    <Text text="%shows_left"
+          GridPane.columnIndex="2"
+          GridPane.columnSpan="2"
           GridPane.rowIndex="9"/>
 
     <!-- Choice Buttons -->
