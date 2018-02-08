@@ -113,4 +113,8 @@ public class Controller {
             Main.LOGGER.config("Reset failed: " + e);
         }
     }
+
+    public void checkRSSURL(MouseEvent mouseEvent) {
+        Main.LOGGER.info("Checking URL...");
+    }
 }
