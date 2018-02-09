@@ -146,7 +146,8 @@
           GridPane.columnSpan="2"
           GridPane.rowIndex="8"/>
 
-    <Text text="%shows_in_database"
+    <Text text="PlaceHolder"
+          fx:id="indb"
           GridPane.columnIndex="2"
           GridPane.columnSpan="2"
           GridPane.rowIndex="8"/>
@@ -156,7 +157,8 @@
           GridPane.columnSpan="2"
           GridPane.rowIndex="9"/>
 
-    <Text text="%shows_left"
+    <Text text="PlaceHolder"
+          fx:id="showsleft"
           GridPane.columnIndex="2"
           GridPane.columnSpan="2"
           GridPane.rowIndex="9"/>
