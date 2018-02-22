@@ -24,7 +24,7 @@ public class PolyThreads {
 
             case 2:
                 Main.LOGGER.entering("GUI", "Starting GUI...");
-                Thread guiTh = new Thread(GUI::LaunchGUI);
+                Thread guiTh = new Thread(GUI::launchGUI);
                 guiTh.start();
                 break;
 

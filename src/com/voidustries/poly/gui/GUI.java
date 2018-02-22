@@ -59,7 +59,7 @@ public class GUI extends Application {
 
     }
 
-    public static void LaunchGUI() {
+    public static void launchGUI() {
         Main.LOGGER.info("Launching GUI");
         try {
             launch();
