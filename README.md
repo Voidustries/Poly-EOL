@@ -29,6 +29,7 @@ HEVC and then switch to 1080p or 720p after a specified number of attempts.
 - [ ] Allow Poly to directly download torrents rather than a external program.
 - [ ] Sync with TheTVDB for Show renaming.
 - [ ] Sync with TheTVDB for meta data.
+- [ ] Full Code Coverage with Junit5 tests
 
 ## Credits
 
