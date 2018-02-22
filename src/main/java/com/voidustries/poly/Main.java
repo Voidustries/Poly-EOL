@@ -24,7 +24,7 @@ public class Main {
         // TODO Make a Splash
 
         // Try to start the System Tray
-        // PolyThreads.startThread(1);
+        PolyThreads.startThread(1);
     }
 
     public static boolean isThisWorking(boolean arg) {
