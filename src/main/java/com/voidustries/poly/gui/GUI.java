@@ -32,7 +32,14 @@ public class GUI extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         String settings = "settings.properties";
+        String layout = "java/com/voidustries/poly/gui/layoutForm.fxml";
+        File l = new File(layout);
         File f = new File(settings);
+
+        if (l.exists()) {
+            System.out.println(true);
+        }
+        System.out.println(false);
 
         if (!f.exists()) {
             makeDefaults();
@@ -42,11 +49,11 @@ public class GUI extends Application {
         ResourceBundle resourceBundle = new PropertyResourceBundle(fis);
         loader.setResources(resourceBundle);
 
-        Parent root = loader.load(getClass().getResourceAsStream("layoutForm.fxml"));
+        Parent root = loader.load(ClassLoader.getSystemResource("layoutForm.fxml"));
 
         Platform.setImplicitExit(false);
 
-        Scene scene = new Scene(root/*, 472, 450*/);
+        Scene scene = new Scene(root);
 
         Image applicationIcon = new Image(getClass().getResourceAsStream("icon.png"));
         primaryStage.getIcons().add(applicationIcon);
