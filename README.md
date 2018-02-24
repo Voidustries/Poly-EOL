@@ -6,8 +6,6 @@
 [![GitHub issues closed](https://img.shields.io/github/issues-closed/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
-[![GitHub Release Date](https://img.shields.io/github/release-date/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/releases)
-[![Github All Releases](https://img.shields.io/github/downloads/atom/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/releases)
 [![GitHub contributors](https://img.shields.io/github/contributors/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/graphs/contributors)
 [![Discord](https://img.shields.io/discord/373656520862466058.svg?style=flat-square)](https://discord.gg/Drzzyjk)
 [![license](https://img.shields.io/github/license/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/blob/master/LICENSE)

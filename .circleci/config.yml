@@ -23,12 +23,8 @@ jobs:
       TERM: dumb
 
     steps:
-
-      - run: sudo add-apt-repository ppa:cwchien/gradle
-      - run: sudo apt-get update
-      - run: sudo apt install gradle -y
-
       - checkout
+      - run: chmod +x gradlew
 
       # Download and cache dependencies
       - restore_cache:
@@ -37,7 +33,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: gradle dependencies
+      - run: ./gradlew dependencies
 
       - save_cache:
           paths:
@@ -45,7 +41,4 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
       # run tests!
-      - run: gradle test
-
-
-
+      - run: ./gradlew test
