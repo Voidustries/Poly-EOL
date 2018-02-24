@@ -6,7 +6,6 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
 [![GitHub contributors](https://img.shields.io/github/contributors/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/graphs/contributors)
-[![Discord](https://img.shields.io/discord/373656520862466058.svg?style=flat-square)](https://discord.gg/Drzzyjk)
 [![license](https://img.shields.io/github/license/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/blob/master/LICENSE)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly)
 
