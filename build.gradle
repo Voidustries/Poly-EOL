@@ -8,15 +8,6 @@
 group 'com.voidustries'
 version '1.0-SNAPSHOT'
 
-sourceSets {
-    main {
-        resources {
-            srcDirs = ["src/main/java/com/voidustries/poly"]
-            includes = ["gui/layoutForm.fxml"]
-        }
-    }
-}
-
 buildscript {
     repositories {
         mavenCentral()

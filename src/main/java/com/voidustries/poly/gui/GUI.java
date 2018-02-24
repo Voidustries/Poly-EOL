@@ -42,13 +42,13 @@ public class GUI extends Application {
         ResourceBundle resourceBundle = new PropertyResourceBundle(fis);
         loader.setResources(resourceBundle);
 
-        Parent root = loader.load(getClass().getResourceAsStream("layoutForm.fxml"));
+        Parent root = loader.load(getClass().getResourceAsStream("/layoutForm.fxml"));
 
         Platform.setImplicitExit(false);
 
         Scene scene = new Scene(root);
 
-        Image applicationIcon = new Image(getClass().getResourceAsStream("icon.png"));
+        Image applicationIcon = new Image(getClass().getResourceAsStream("/icon.png"));
         primaryStage.getIcons().add(applicationIcon);
 
         primaryStage.setResizable(false);
