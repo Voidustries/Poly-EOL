@@ -3,11 +3,14 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+
+machine:
+  java:
+    version: oraclejdk8
+
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/oraclejdk:8-jdk
+    machine: true
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
