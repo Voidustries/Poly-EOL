@@ -24,6 +24,10 @@ jobs:
 
     steps:
 
+      - run: sudo add-apt-repository ppa:cwchien/gradle
+      - run: sudo apt-get update
+      - run: sudo apt install gradle -y
+
       - checkout
 
       # Download and cache dependencies
