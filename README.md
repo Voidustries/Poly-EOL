@@ -1,8 +1,14 @@
 # Poly
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0330000d284043f19a126cada035d410)](https://www.codacy.com/app/ponimansky.guy/Poly?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Voidustries/Poly&amp;utm_campaign=Badge_Grade)
-[![GitHub issues](https://img.shields.io/github/issues/voidustries/poly.svg)](https://github.com/Voidustries/Poly)
-[![license](https://img.shields.io/github/license/voidustries/poly.svg)](https://github.com/Voidustries/Poly/blob/master/LICENSE)
+[![Codacy grade](https://img.shields.io/codacy/grade/0330000d284043f19a126cada035d410.svg?style=flat-square)](https://www.codacy.com/app/ponimansky.guy/Poly?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Voidustries/Poly&amp;utm_campaign=Badge_Grade)
+[![CircleCI](https://circleci.com/gh/Voidustries/Poly/tree/Gradle-Migration-For-CI.svg?style=shield)](https://circleci.com/gh/Voidustries/Poly/tree/Gradle-Migration-For-CI)
+[![GitHub issues](https://img.shields.io/github/issues/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/issues)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
+[![GitHub contributors](https://img.shields.io/github/contributors/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/graphs/contributors)
+[![Discord](https://img.shields.io/discord/373656520862466058.svg?style=flat-square)](https://discord.gg/Drzzyjk)
+[![license](https://img.shields.io/github/license/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/blob/master/LICENSE)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly)
 
 Poly is a web scraping program that allows automatic download of TV Shows from a
 subscribed RSS feed. Poly creates a database to keep track of what you already
@@ -31,6 +37,7 @@ HEVC and then switch to 1080p or 720p after a specified number of attempts.
 - [ ] Allow Poly to directly download torrents rather than a external program.
 - [ ] Sync with TheTVDB for Show renaming.
 - [ ] Sync with TheTVDB for meta data.
+- [ ] Full Code Coverage with Junit5 tests
 
 ## Credits
 
