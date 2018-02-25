@@ -5,6 +5,8 @@
 version: 2
 
 jobs:
+  parallelism: 2
+
   build:
     docker:
       # specify the version you desire here
