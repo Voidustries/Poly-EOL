@@ -10,7 +10,9 @@ Creator Comments:
         anytime.
 */
 
+import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 
 public class SysTray {
 
@@ -23,7 +25,8 @@ public class SysTray {
 
         SystemTray systemTray = SystemTray.getSystemTray();
 
-        Image image = Toolkit.getDefaultToolkit().getImage("src/com/voidustries/poly/img/Icon.png");
+        URL url = SysTray.class.getResource("/Icon.png");
+        Image image = new ImageIcon(url).getImage();
 
         PopupMenu trayPopupMenu = new PopupMenu();
 
