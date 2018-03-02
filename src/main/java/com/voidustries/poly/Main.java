@@ -28,10 +28,6 @@ public class Main {
     }
 
     public static boolean isThisWorking(boolean arg) {
-        if (arg) {
-            return true;
-        } else {
-            return false;
-        }
+        return arg;
     }
 }
