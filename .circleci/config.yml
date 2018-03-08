@@ -42,7 +42,7 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache:
-          keys:
+        keys:
           - v1-dependencies-{{ checksum "build.gradle" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
@@ -55,9 +55,10 @@ jobs:
       - run: ./gradlew dependencies
 
       - save_cache:
-          paths:
-            - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
+        paths:
+          - ~/.gradle
+
+        key: v1-dependencies-{{ checksum "build.gradle" }}
 
       # run tests!
       - run: ./gradlew test
@@ -92,16 +93,16 @@ jobs:
           - run: ./gradlew dependencies
 
           - save_cache:
-              paths:
-                - ~/.gradle
-              key: v2-dependencies-{{ checksum "build.gradle" }}
+            paths:
+              - ~/.gradle
+            key: v2-dependencies-{{ checksum "build.gradle" }}
 
           # run tests!
           - run: ./gradlew test
 
 workflows:
   version: 2
-  build-on-jdk8-and-9:
+  jdk8-and-9:
     jobs:
       - checkout_code
       - test-jdk-9:
