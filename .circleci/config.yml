@@ -4,35 +4,8 @@
 #
 version: 2
 
-workflows:
-  version: 2
-  jdk8-and-9:
-    jobs:
-      - checkout_code
-      - build-jdk-9:
-        requires:
-          - checkout_code
-      - build-jdk-8:
-        requires:
-          - checkout_code
-
 jobs:
-  checkout_code:
-    docker:
-      - image: circleci/jdk8:0.1.1
-
-    working_directory: ~/repo
-
-    steps:
-      - checkout
-
-      - save_cache:
-        paths:
-          - ~/.gradle
-        key: v1-dependencies-{{ checksum "build.gradle" }}
-
-
-  build-jdk-9:
+  build:
     docker:
       # specify the version you desire here
       - image: circleci/jdk8:0.1.1
@@ -50,65 +23,25 @@ jobs:
       TERM: dumb
 
     steps:
+      - checkout
       - run: chmod +x gradlew
-
-      # Download and cache dependencies
-      - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "build.gradle" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
       - run: sudo add-apt-repository ppa:webupd8team/java
       - run: sudo apt-get update
       - run: sudo apt-get install oracle-java9-installer -y
 
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "build.gradle" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
 
       - run: ./gradlew dependencies
 
       - save_cache:
-        paths:
-          - ~/.gradle
-
-        key: v1-dependencies-{{ checksum "build.gradle" }}
+          paths:
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "build.gradle" }}
 
       # run tests!
       - run: ./gradlew test
-
-  build-jdk-8:
-    docker:
-          # specify the version you desire here
-          - image: circleci/jdk8:0.1.1
-
-          # Specify service dependencies here if necessary
-          # CircleCI maintains a library of pre-built images
-          # documented at https://circleci.com/docs/2.0/circleci-images/
-          # - image: circleci/postgres:9.4
-
-        working_directory: ~/repo
-
-        environment:
-          # Customize the JVM maximum heap limit
-          JVM_OPTS: -Xmx3200m
-          TERM: dumb
-
-        steps:
-          - checkout
-          - run: chmod +x gradlew
-
-          # Download and cache dependencies
-          - restore_cache:
-              keys:
-              - v1-dependencies-{{ checksum "build.gradle" }}
-              # fallback to using the latest cache if no exact match is found
-              - v1-dependencies-
-
-          - run: ./gradlew dependencies
-
-          - save_cache:
-              paths:
-                - ~/.gradle
-              key: v1-dependencies-{{ checksum "build.gradle" }}
-
-          # run tests!
-          - run: ./gradlew test
