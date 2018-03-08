@@ -4,6 +4,18 @@
 #
 version: 2
 
+workflows:
+  version: 2
+  jdk8-and-9:
+    jobs:
+      - checkout_code
+      - build-jdk-9:
+        requires:
+          - checkout_code
+      - build-jdk-8:
+        requires:
+          - checkout_code
+
 jobs:
   checkout_code:
     docker:
@@ -100,15 +112,3 @@ jobs:
 
           # run tests!
           - run: ./gradlew test
-
-workflows:
-  version: 2
-  jdk8-and-9:
-    jobs:
-      - checkout_code
-      - build-jdk-9:
-        requires:
-          - checkout_code
-      - build-jdk-8:
-        requires:
-          - checkout_code
