@@ -9,7 +9,21 @@ public class Main {
 
     public final static Logger LOGGER = Logger.getLogger(Main.class.getName());
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+
+        try {
+            setupLogger();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        PolySplash.splash();
+
+        // Try to start the System Tray
+        PolyThreads.startThread(1);
+    }
+
+    private static void setupLogger() throws IOException {
         ConsoleHandler CONSOLE_HANDLER = new ConsoleHandler();
         FileHandler FILE_HANDLER = new FileHandler("PolyLogFile.log");
         Formatter FORMATTER = new CustomFormatter();
@@ -20,18 +34,9 @@ public class Main {
         FILE_HANDLER.setFormatter(FORMATTER);
         LOGGER.setLevel(Level.ALL);
         LOGGER.setUseParentHandlers(false);
-
-        // TODO Make a Splash
-
-        // Try to start the System Tray
-        PolyThreads.startThread(1);
     }
 
     public static boolean isThisWorking(boolean arg) {
-        if (arg) {
-            return true;
-        } else {
-            return false;
-        }
+        return arg;
     }
 }
