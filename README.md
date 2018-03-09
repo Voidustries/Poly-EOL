@@ -32,7 +32,7 @@ HEVC and then switch to 1080p or 720p after a specified number of attempts.
 
 ## Future Plans
 
-- [ ] Add TV Shows from Mobile App OR Desktop App.
+- [ ] Add TV Shows from Mobile App AND/OR Desktop App.
 - [ ] Allow Poly to directly download torrents rather than a external program.
 - [ ] Sync with TheTVDB for Show renaming.
 - [ ] Sync with TheTVDB for meta data.
