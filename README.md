@@ -14,6 +14,8 @@ subscribed RSS feed. Poly creates a database to keep track of what you already
 have downloaded and does not download duplicates. Downloads will try for 1080p
 HEVC and then switch to 1080p or 720p after a specified number of attempts.
 
+[![Demo](http://thumbs.gfycat.com/TornFoolishAlbino-size_restricted.gif)](https://gfycat.com/gifs/detail/TornFoolishAlbino)
+
 ## Usage
 
 * `Fill this out after first version`
