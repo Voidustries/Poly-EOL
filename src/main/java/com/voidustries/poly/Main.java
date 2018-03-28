@@ -11,13 +11,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
         try {
             setupLogger();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        LOGGER.entering("PolySplash", "splash");
+
         PolySplash.splash();
+
+        LOGGER.exiting("PolySplash", "splash");
 
         // Try to start the System Tray
         PolyThreads.startThread(1);

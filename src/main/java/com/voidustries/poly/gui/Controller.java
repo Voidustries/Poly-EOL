@@ -98,7 +98,7 @@ public class Controller {
             saveProps.setProperty("rss_update", rss_update.getValue().toString());
             saveProps.setProperty("download_update", download_update.getValue().toString());
             saveProps.setProperty("f2", f2_after.getValue().toString());
-            saveProps.store(new FileOutputStream("settings.properties"), "");
+            saveProps.store(new FileOutputStream("props.properties"), "");
         } catch (IOException e) {
             Main.LOGGER.warning("CANNOT SAVE TO FILE " + e);
         }
@@ -107,7 +107,7 @@ public class Controller {
     private void resetSettings() {
         try {
             Properties resetProps = new Properties();
-            resetProps.load(new FileInputStream("settings.properties"));
+            resetProps.load(new FileInputStream("props.properties"));
             rss_url.setText(resetProps.getProperty("rss_url"));
             database_dir.setText(resetProps.getProperty("database_dir"));
             show_dir.setText(resetProps.getProperty("show_dir"));
