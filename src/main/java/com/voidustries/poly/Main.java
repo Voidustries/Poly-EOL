@@ -2,6 +2,8 @@ package com.voidustries.poly;
 
 // Class Created by Stone Monarch on 1/20/2018
 
+import com.voidustries.poly.conection.tvdb.TVDB;
+
 import java.io.IOException;
 import java.util.logging.*;
 
@@ -11,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        TVDB db = new TVDB("sdsdb");
 
         try {
             setupLogger();
@@ -27,6 +29,7 @@ public class Main {
 
         // Try to start the System Tray
         PolyThreads.startThread(1);
+
     }
 
     private static void setupLogger() throws IOException {
