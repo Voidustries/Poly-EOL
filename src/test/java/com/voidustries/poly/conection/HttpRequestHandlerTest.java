@@ -1,5 +1,9 @@
 package com.voidustries.poly.conection;
 
+/*
+Class Created by Stone Monarch on 4/9/2018
+*/
+
 import com.google.gson.JsonObject;
 import org.junit.jupiter.api.Test;
 
