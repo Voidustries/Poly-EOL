@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TVDB db = new TVDB("sdsdb");
+        TVDB db = new TVDB("4DA0410CE91A24A6");
 
         try {
             setupLogger();

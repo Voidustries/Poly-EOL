@@ -25,7 +25,7 @@ public class HttpRequestHandler {
 
         String url = apiurl + endpoint;
 
-        URL obj = new URL(null, url, new sun.net.www.protocol.https.Handler());
+        URL obj = new URL(url);
         HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 
         con.setRequestMethod("POST");
@@ -60,7 +60,7 @@ public class HttpRequestHandler {
         String url = apiurl + endpoint;
         keys = getKeyValues(headers);
 
-        URL obj = new URL(null, url, new sun.net.www.protocol.https.Handler());
+        URL obj = new URL(url);
         HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 
         con.setRequestMethod("POST");
@@ -95,7 +95,7 @@ public class HttpRequestHandler {
 
         String url = apiurl + endpoint + "?" + pName + "=" + pValue;
 
-        URL obj = new URL(null, url, new sun.net.www.protocol.https.Handler());
+        URL obj = new URL(url);
         HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 
         con.setRequestMethod("GET");
@@ -123,7 +123,7 @@ public class HttpRequestHandler {
         String url = apiurl + endpoint + "?" + pName + "=" + pValue;
         keys = getKeyValues(headers);
 
-        URL obj = new URL(null, url, new sun.net.www.protocol.https.Handler());
+        URL obj = new URL(url);
         HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 
         con.setRequestMethod("GET");
