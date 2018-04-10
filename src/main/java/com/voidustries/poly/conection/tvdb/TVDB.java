@@ -2,7 +2,7 @@ package com.voidustries.poly.conection.tvdb;
 
 import com.google.gson.JsonObject;
 import com.voidustries.poly.conection.AbstractAgent;
-import com.voidustries.poly.conection.HttpsRequestHandler;
+import com.voidustries.poly.conection.HttpRequestHandler;
 
 import java.io.IOException;
 
@@ -34,7 +34,7 @@ public class TVDB extends AbstractAgent{
         body.addProperty("apikey", getApi());
 
         try {
-            token = HttpsRequestHandler.post(api_url, "/login", body, head);
+            token = HttpRequestHandler.post(api_url, "/login", body, head);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -8,12 +8,12 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class HttpsRequestHandlerTest {
+class HttpRequestHandlerTest {
 
     @Test
     void getKeyValues() {
 
-        HttpsRequestHandler test = new HttpsRequestHandler();
+        HttpRequestHandler test = new HttpRequestHandler();
 
         final JsonObject in = new JsonObject();
         final String[] expectedOut = new String[]{"111", "333", "555"};
@@ -28,7 +28,7 @@ class HttpsRequestHandlerTest {
 
     @Test
     void post() {
-        final HttpsRequestHandler test = new HttpsRequestHandler();
+        final HttpRequestHandler test = new HttpRequestHandler();
         final JsonObject body = new JsonObject();
         JsonObject out = new JsonObject();
 
@@ -45,7 +45,7 @@ class HttpsRequestHandlerTest {
 
     @Test
     void postWithHead() {
-        final HttpsRequestHandler test = new HttpsRequestHandler();
+        final HttpRequestHandler test = new HttpRequestHandler();
         final JsonObject head = new JsonObject();
         final JsonObject body = new JsonObject();
         JsonObject out = new JsonObject();
@@ -69,7 +69,7 @@ class HttpsRequestHandlerTest {
 
     @Test
     void get() {
-        HttpsRequestHandler test = new HttpsRequestHandler();
+        HttpRequestHandler test = new HttpRequestHandler();
         JsonObject out = new JsonObject();
 
         try {
@@ -83,7 +83,7 @@ class HttpsRequestHandlerTest {
 
     @Test
     void getWithHead() {
-        final HttpsRequestHandler test = new HttpsRequestHandler();
+        final HttpRequestHandler test = new HttpRequestHandler();
         final JsonObject head = new JsonObject();
         JsonObject out = new JsonObject();
 

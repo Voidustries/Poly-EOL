@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 
-public class HttpsRequestHandler {
+public class HttpRequestHandler {
 
     public static JsonObject post(String apiurl, String endpoint, JsonObject body) throws IOException {
 
