@@ -40,5 +40,5 @@ HEVC and then switch to 1080p or 720p after a specified number of attempts.
 
 ## Credits
 
-* [Stone Monarch](https://gitlab.com/StoneMonarch)
+* [Stone Monarch](https://github.com/StoneMonarch)
 * [Guy Ponimansky](https://github.com/gponimansky)
