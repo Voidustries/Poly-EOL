@@ -165,9 +165,7 @@ public class HttpRequestHandler {
             keys.add(entry.getKey());
         }
 
-        String[] array = new String[keys.size()];
-
         // Convert ArrayList to String[]
-        return keys.toArray(array);
+        return keys.toArray(new String[0]);
     }
 }
