@@ -25,7 +25,7 @@ public class SysTray {
 
         SystemTray systemTray = SystemTray.getSystemTray();
 
-        URL url = SysTray.class.getResource("/Icon.png");
+        URL url = SysTray.class.getResource("Icon.png");
         Image image = new ImageIcon(url).getImage();
 
         PopupMenu trayPopupMenu = new PopupMenu();

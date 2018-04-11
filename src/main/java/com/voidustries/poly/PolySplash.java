@@ -19,7 +19,7 @@ public class PolySplash {
         int screenHeight = screenSize.height;
         int screenWidth = screenSize.width;
 
-        URL url = PolySplash.class.getResource("/splash.gif");
+        URL url = PolySplash.class.getResource("splash.gif");
         JWindow window = new JWindow();
         window.getContentPane().add(new JLabel("", new ImageIcon(url), SwingConstants.CENTER));
         window.setBounds((screenWidth / 2) - 241, (screenHeight / 2) - 330, 482, 661);
