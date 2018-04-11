@@ -6,24 +6,18 @@
  */
 group 'com.voidustries'
 version '1.0-SNAPSHOT'
-import org.apache.tools.ant.filters.ReplaceTokens
 
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
     }
     dependencies {
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.1.0'
-        classpath 'gradle.plugin.com.blogspot.nombre_temp.gradle:replace-tokens-resources-plugin:1.0.1'
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'org.junit.platform.gradle.plugin'
-apply plugin: 'com.blogspot.nombre-temp.replace.tokens.resources'
 
 repositories {
     mavenCentral()
@@ -44,9 +38,4 @@ test {
     testLogging {
         events "passed", "skipped", "failed"
     }
-}
-
-processResources {
-    expand(api: 'foo')
-    filter(ReplaceTokens, tokens : [TVDB_API: "foo"])
 }
