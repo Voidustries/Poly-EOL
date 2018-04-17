@@ -1,9 +1,5 @@
 package com.voidustries.poly.conection;
 
-/*
-Class Created by Stone Monarch on 4/9/2018
-*/
-
 import com.google.gson.JsonObject;
 import org.junit.jupiter.api.Test;
 
@@ -12,6 +8,9 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Test class for the HttpRequestHandler that Poly uses
+ */
 class HttpRequestHandlerTest {
 
     @Test
@@ -95,7 +94,7 @@ class HttpRequestHandlerTest {
         head.addProperty("Accept", "application/json");
 
         try {
-            out = test.get("http://httpbin.org", "/get", head,"111", "222");
+            out = test.get("http://httpbin.org", "/get", head, "111", "222");
         } catch (IOException e) {
             e.printStackTrace();
         }
