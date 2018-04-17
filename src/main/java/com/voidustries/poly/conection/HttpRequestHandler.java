@@ -1,9 +1,5 @@
 package com.voidustries.poly.conection;
 
-/*
-Class Created by Stone Monarch on 4/2/2018
-*/
-
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -19,8 +15,19 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * A simple Http request handler for Poly to GET and POST
+ */
 public class HttpRequestHandler {
 
+    /**
+     * Post to an API endpoint
+     * @param apiurl URL of the API (e.x. https://api.thetvdb.com)
+     * @param endpoint The end point URL for the POST request (e.x. /login)
+     * @param body Data to be sent to the endpoint in a Google Gson.JsonObject object
+     * @return The response body of the request in a Google Gson.JsonObject object
+     * @throws IOException
+     */
     public static JsonObject post(String apiurl, String endpoint, JsonObject body) throws IOException {
 
         Gson g = new Gson();
@@ -54,6 +61,16 @@ public class HttpRequestHandler {
         JsonObject responseBody = (JsonObject) parser.parse(response.toString());
         return responseBody;
     }
+
+    /**
+     * Post to an API endpoint
+     * @param apiurl URL of the API (e.x. https://api.thetvdb.com)
+     * @param endpoint The end point URL for the POST request (e.x. /login)
+     * @param body Data to be sent to the endpoint in a Google Gson.JsonObject object
+     * @param headers Data to be applied to the header of the POST
+     * @return The response body of the request in a Google Gson.JsonObject object
+     * @throws IOException
+     */
     public static JsonObject post(String apiurl, String endpoint, JsonObject body, JsonObject headers) throws IOException {
 
         Gson g = new Gson();
@@ -93,6 +110,16 @@ public class HttpRequestHandler {
         JsonObject responseBody = (JsonObject) parser.parse(response.toString());
         return responseBody;
     }
+
+    /**
+     * GET to an API endpoint
+     * @param apiurl URL of the API (e.x. https://api.thetvdb.com)
+     * @param endpoint The end point URL for the POST request (e.x. /login)
+     * @param pName Name of the parameter to be sent
+     * @param pValue Parameter value
+     * @return The response body of the request in a Google Gson.JsonObject format
+     * @throws IOException
+     */
     public static JsonObject get(String apiurl, String endpoint, String pName, String pValue) throws IOException {
 
         JsonParser parser = new JsonParser();
@@ -119,6 +146,17 @@ public class HttpRequestHandler {
         JsonObject responseBody = (JsonObject) parser.parse(response.toString());
         return responseBody;
     }
+
+    /**
+     * GET to an API endpiont
+     * @param apiurl URL of the API (e.x. https://api.thetvdb.com)
+     * @param endpoint The end point URL for the POST request (e.x. /login)
+     * @param headers Data to be applied to the header of the GET
+     * @param pName Name of the parameter to be sent
+     * @param pValue Parameter value
+     * @return The response body of the request in a Google Gson.JsonObject format
+     * @throws IOException
+     */
     public static JsonObject get(String apiurl, String endpoint, JsonObject headers, String pName, String pValue) throws IOException {
 
         JsonParser parser = new JsonParser();
@@ -154,6 +192,11 @@ public class HttpRequestHandler {
 
     // Take a JsonObject and return a list of key values
 
+    /**
+     * Return all the top level keys in a Google Gson.JsonObject object
+     * @param jsonObject The Gson.JsonObject you want the keys for
+     * @return String array with all the top level keys
+     */
     public static String[] getKeyValues(JsonObject jsonObject) {
 
         ArrayList<String> keys = new ArrayList<>();
@@ -161,7 +204,7 @@ public class HttpRequestHandler {
         // Go through every key in the JsonObject and add it to an array
 
         Set<Map.Entry<String, JsonElement>> entries = jsonObject.entrySet();
-        for (Map.Entry<String, JsonElement> entry: entries) {
+        for (Map.Entry<String, JsonElement> entry : entries) {
             keys.add(entry.getKey());
         }
 
