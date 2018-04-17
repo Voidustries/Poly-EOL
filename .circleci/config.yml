@@ -21,7 +21,6 @@ jobs:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
       TERM: dumb
-      JAVA_HOME: /usr/lib/jvm/java-9-oracle
 
     dependencies:
       pre:
