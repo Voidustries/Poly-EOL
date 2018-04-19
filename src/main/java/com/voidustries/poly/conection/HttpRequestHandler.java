@@ -26,7 +26,7 @@ public class HttpRequestHandler {
      * @param endpoint The end point URL for the POST request (e.x. /login)
      * @param body Data to be sent to the endpoint in a Google JsonObject object
      * @return The response body of the request in a Google JsonObject object
-     * @throws IOException
+     * @throws IOException if an I/O exception occurs.
      */
     public static JsonObject post(String apiurl, String endpoint, JsonObject body) throws IOException {
 
@@ -69,7 +69,7 @@ public class HttpRequestHandler {
      * @param body Data to be sent to the endpoint in a Google JsonObject object
      * @param headers Data to be applied to the header of the POST
      * @return The response body of the request in a Google JsonObject object
-     * @throws IOException
+     * @throws IOException if an I/O exception occurs.
      */
     public static JsonObject post(String apiurl, String endpoint, JsonObject body, JsonObject headers) throws IOException {
 
@@ -118,7 +118,7 @@ public class HttpRequestHandler {
      * @param pName Name of the parameter to be sent
      * @param pValue Parameter value
      * @return The response body of the request in a Google JsonObject format
-     * @throws IOException
+     * @throws IOException if an I/O exception occurs.
      */
     public static JsonObject get(String apiurl, String endpoint, String pName, String pValue) throws IOException {
 
@@ -155,7 +155,7 @@ public class HttpRequestHandler {
      * @param pName Name of the parameter to be sent
      * @param pValue Parameter value
      * @return The response body of the request in a Google JsonObject format
-     * @throws IOException
+     * @throws IOException if an I/O exception occurs.
      */
     public static JsonObject get(String apiurl, String endpoint, JsonObject headers, String pName, String pValue) throws IOException {
 
