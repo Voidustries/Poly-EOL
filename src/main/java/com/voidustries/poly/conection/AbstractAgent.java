@@ -52,7 +52,7 @@ public abstract class AbstractAgent {
 
     /**
      * Set the token in the object
-     * @param token
+     * @param token Google JsonObject containing the token
      */
     public void setToken(JsonObject token) {
         this.token = token.get("token").toString();
