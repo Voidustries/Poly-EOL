@@ -24,8 +24,8 @@ public class HttpRequestHandler {
      * Post to an API endpoint
      * @param apiurl URL of the API (e.x. https://api.thetvdb.com)
      * @param endpoint The end point URL for the POST request (e.x. /login)
-     * @param body Data to be sent to the endpoint in a Google Gson.JsonObject object
-     * @return The response body of the request in a Google Gson.JsonObject object
+     * @param body Data to be sent to the endpoint in a Google JsonObject object
+     * @return The response body of the request in a Google JsonObject object
      * @throws IOException
      */
     public static JsonObject post(String apiurl, String endpoint, JsonObject body) throws IOException {
@@ -66,9 +66,9 @@ public class HttpRequestHandler {
      * Post to an API endpoint
      * @param apiurl URL of the API (e.x. https://api.thetvdb.com)
      * @param endpoint The end point URL for the POST request (e.x. /login)
-     * @param body Data to be sent to the endpoint in a Google Gson.JsonObject object
+     * @param body Data to be sent to the endpoint in a Google JsonObject object
      * @param headers Data to be applied to the header of the POST
-     * @return The response body of the request in a Google Gson.JsonObject object
+     * @return The response body of the request in a Google JsonObject object
      * @throws IOException
      */
     public static JsonObject post(String apiurl, String endpoint, JsonObject body, JsonObject headers) throws IOException {
@@ -117,7 +117,7 @@ public class HttpRequestHandler {
      * @param endpoint The end point URL for the POST request (e.x. /login)
      * @param pName Name of the parameter to be sent
      * @param pValue Parameter value
-     * @return The response body of the request in a Google Gson.JsonObject format
+     * @return The response body of the request in a Google JsonObject format
      * @throws IOException
      */
     public static JsonObject get(String apiurl, String endpoint, String pName, String pValue) throws IOException {
@@ -154,7 +154,7 @@ public class HttpRequestHandler {
      * @param headers Data to be applied to the header of the GET
      * @param pName Name of the parameter to be sent
      * @param pValue Parameter value
-     * @return The response body of the request in a Google Gson.JsonObject format
+     * @return The response body of the request in a Google JsonObject format
      * @throws IOException
      */
     public static JsonObject get(String apiurl, String endpoint, JsonObject headers, String pName, String pValue) throws IOException {
@@ -193,8 +193,8 @@ public class HttpRequestHandler {
     // Take a JsonObject and return a list of key values
 
     /**
-     * Return all the top level keys in a Google Gson.JsonObject object
-     * @param jsonObject The Gson.JsonObject you want the keys for
+     * Return all the top level keys in a Google JsonObject object
+     * @param jsonObject The JsonObject you want the keys for
      * @return String array with all the top level keys
      */
     public static String[] getKeyValues(JsonObject jsonObject) {
