@@ -2,11 +2,7 @@ package com.voidustries.poly;
 
 // Class Created by Stone Monarch on 1/20/2018
 
-import com.voidustries.poly.conection.tvdb.TVDB;
-
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.logging.*;
 
 public class Main {
@@ -14,17 +10,6 @@ public class Main {
     public final static Logger LOGGER = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
-
-        Properties prop = new Properties();
-
-        // Temp Placement for testing and till token replacement is working
-        try {
-            prop.load(new FileInputStream("tokens.properties"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        TVDB db = new TVDB(prop.getProperty("tvdb.api"));
 
         try {
             setupLogger();
