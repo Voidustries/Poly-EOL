@@ -17,10 +17,15 @@ public class Main {
             e.printStackTrace();
         }
 
+        LOGGER.entering("PolySplash", "splash");
+
         PolySplash.splash();
+
+        LOGGER.exiting("PolySplash", "splash");
 
         // Try to start the System Tray
         PolyThreads.startThread(1);
+
     }
 
     private static void setupLogger() throws IOException {

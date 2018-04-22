@@ -31,7 +31,7 @@ public class GUI extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        String settings = "settings.properties";
+        String settings = "props.properties";
         File f = new File(settings);
 
         if (!f.exists()) {
@@ -42,13 +42,13 @@ public class GUI extends Application {
         ResourceBundle resourceBundle = new PropertyResourceBundle(fis);
         loader.setResources(resourceBundle);
 
-        Parent root = loader.load(getClass().getResourceAsStream("/layoutForm.fxml"));
+        Parent root = loader.load(getClass().getResourceAsStream("layoutForm.fxml"));
 
         Platform.setImplicitExit(false);
 
         Scene scene = new Scene(root);
 
-        Image applicationIcon = new Image(getClass().getResourceAsStream("/icon.png"));
+        Image applicationIcon = new Image(getClass().getResourceAsStream("icon.png"));
         primaryStage.getIcons().add(applicationIcon);
 
         primaryStage.setResizable(false);
@@ -81,7 +81,7 @@ public class GUI extends Application {
             makeDefaultProps.setProperty("rss_update", "1");
             makeDefaultProps.setProperty("download_update", "1");
             makeDefaultProps.setProperty("f2", "48");
-            makeDefaultProps.store(new FileOutputStream("settings.properties"), "");
+            makeDefaultProps.store(new FileOutputStream("props.properties"), "");
         } catch (IOException e) {
             Main.LOGGER.warning("CANNOT CREATE DEFAULT SETTINGS FILE: " + e);
         }
