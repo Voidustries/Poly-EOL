@@ -36,16 +36,41 @@
   </a>
 </p>
 
-Poly is a web scraping program that allows automatic download of TV Shows from a
-subscribed RSS feed. Poly creates a database to keep track of what you already
-have downloaded and does not download duplicates. Downloads will try for 1080p
-HEVC and then switch to 1080p or 720p after a specified number of attempts.
+Poly is a management utility to help organise a database of TV shows and movies. Handling large amounts of files in a
+library can be daunting and unruly, Poly helps by doing most of the work for you so you have more time to watch and 
+spend less time tracking, renaming, and downloading. The hierarchy that Poly follows is the same as Plex, as this is the 
+most popular home media server.   
 
 [![Demo](http://thumbs.gfycat.com/TornFoolishAlbino-size_restricted.gif)](https://gfycat.com/gifs/detail/TornFoolishAlbino)
 
-## Usage
+## Directory Hierarchy
 
-* `Fill this out after first version`
+
+##### Outline
+```
++---Movies
+|   |   *Movie Name* (*Year*).*ext*
+|   |   *Movie Name* (*Year*).*ext*
+\---TV Shows
+    +---*Show Name*
+    |   +---*Season*
+    |   |      *Show Name* - *S00E00* - *Episode Name*.*ext*
+```
+
+##### Example
+```
++---Movies
+|   |   The Lord of the Rings The Fellowship of the Ring (2001).mp4
+|   |   The Lord of the Rings The Return of the King (2003).mp4
+|   |   The Lord of the Rings The Two Towers (2002).mp4
+|   |   The Martian (2015).mkv
+\---TV Shows
+    +---Mr. Robot
+    |   +---Season 1
+    |   |       Mr. Robot - S01E01 - eps1.0_hellofriend.mov.mkv
+    |   |       Mr. Robot - S01E02 - eps1.1_ones-and-zer0es.mpeg.mkv
+    |   |       Mr. Robot - S01E03 - eps1.2_d3bug.mkv.mkv
+```
 
 ## Contributing
 
