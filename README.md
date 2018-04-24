@@ -81,8 +81,8 @@ most popular home media server.
 5. Submit a pull request! :smile:
 
 ## History
+None as of yet
 
-* Coming soon
 
 ## Future Plans
 
@@ -91,6 +91,8 @@ most popular home media server.
 - [ ] Sync with TheTVDB for Show renaming.
 - [ ] Sync with TheTVDB for meta data.
 - [ ] Full Code Coverage with Junit5 tests
+- [ ] Database Rearrangement
+- [ ] Show Tracking
 
 ## Credits
 
