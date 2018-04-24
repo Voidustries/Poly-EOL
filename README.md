@@ -82,7 +82,7 @@ most popular home media server.
 
 ## History
 
-* Version 0.1 (Alien Panther) - Coming soon
+* Coming soon
 
 ## Future Plans
 
