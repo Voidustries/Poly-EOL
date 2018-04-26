@@ -17,6 +17,7 @@ import java.util.Set;
 
 /**
  * A simple Http request handler for Poly to GET and POST
+ * NOTE: HTTPS is not supported, just HTTP.
  */
 public class HttpRequestHandler {
 
