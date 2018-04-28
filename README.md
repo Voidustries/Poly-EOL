@@ -1,7 +1,7 @@
 # Poly
 [![Codacy grade](https://img.shields.io/codacy/grade/0330000d284043f19a126cada035d410.svg?style=flat-square)](https://www.codacy.com/app/ponimansky.guy/Poly?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Voidustries/Poly&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://img.shields.io/circleci/project/github/Voidustries/Poly.svg?style=flat-square)](https://circleci.com/gh/Voidustries/Poly/tree/master)
-[![GitHub issues](https://img.shields.io/github/issues-raw/voidustries/poly/tree/master.svg?style=flat-square)](https://github.com/Voidustries/Poly/issues)
+[![GitHub issues](https://img.shields.io/github/issues-raw/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/issues)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/voidustries/poly.svg?style=flat-square)](https://github.com/Voidustries/Poly/pulls)
