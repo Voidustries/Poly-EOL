@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
@@ -96,6 +98,65 @@ public class HttpRequestHandler {
         wr.writeBytes(g.toJson(body));
         wr.flush();
         wr.close();
+
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
+
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+
+        JsonObject responseBody = (JsonObject) parser.parse(response.toString());
+        return responseBody;
+    }
+
+    public static JsonObject get(String apiurl, String endpoint) throws IOException {
+
+        JsonParser parser = new JsonParser();
+
+        String url = apiurl + endpoint;
+
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+        con.setRequestMethod("GET");
+
+        con.setDoOutput(true);
+
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
+
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+
+        JsonObject responseBody = (JsonObject) parser.parse(response.toString());
+        return responseBody;
+    }
+
+    public static JsonObject get(String apiurl, String endpoint, JsonObject headers) throws IOException {
+
+        JsonParser parser = new JsonParser();
+
+        String[] keys;
+        String url = apiurl + endpoint;
+        keys = getKeyValues(headers);
+
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+        con.setRequestMethod("GET");
+        for (int i = 0; i < keys.length; i++) {
+            con.setRequestProperty(keys[i], headers.get(keys[i]).getAsString());
+        }
+
+        con.setDoOutput(true);
 
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(con.getInputStream()));

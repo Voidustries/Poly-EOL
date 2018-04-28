@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * Test class for the HttpRequestHandler that Poly uses
@@ -38,7 +39,7 @@ class HttpRequestHandlerTest {
         body.addProperty("111", "222");
 
         try {
-            out = test.post("http://httpbin.org", "/post", body);
+            out = test.post("https://httpbin.org", "/post", body);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,7 +60,7 @@ class HttpRequestHandlerTest {
         body.addProperty("111", "222");
 
         try {
-            out = test.post("http://httpbin.org", "/post", body, head);
+            out = test.post("https://httpbin.org", "/post", body, head);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,7 +77,7 @@ class HttpRequestHandlerTest {
         JsonObject out = new JsonObject();
 
         try {
-            out = test.get("http://httpbin.org", "/get", "111", "222");
+            out = test.get("https://httpbin.org", "/get", "111", "222");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -94,12 +95,45 @@ class HttpRequestHandlerTest {
         head.addProperty("Accept", "application/json");
 
         try {
-            out = test.get("http://httpbin.org", "/get", head, "111", "222");
+            out = test.get("https://httpbin.org", "/get", head, "111", "222");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         assertEquals("\"222\"", out.getAsJsonObject("args").get("111").toString());
+        assertEquals("\"application/json\"", out.getAsJsonObject("headers").get("Content-Type").toString());
+        assertEquals("\"application/json\"", out.getAsJsonObject("headers").get("Accept").toString());
+    }
+
+    @Test
+    void getWithoutParam() {
+        HttpRequestHandler test = new HttpRequestHandler();
+        JsonObject out = new JsonObject();
+
+        try {
+            out = test.get("https://httpbin.org", "/get");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        assertNotNull(out);
+    }
+
+    @Test
+    void getWithHeadWithoutParam() {
+        final HttpRequestHandler test = new HttpRequestHandler();
+        final JsonObject head = new JsonObject();
+        JsonObject out = new JsonObject();
+
+        head.addProperty("Content-Type", "application/json");
+        head.addProperty("Accept", "application/json");
+
+        try {
+            out = test.get("https://httpbin.org", "/get", head);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         assertEquals("\"application/json\"", out.getAsJsonObject("headers").get("Content-Type").toString());
         assertEquals("\"application/json\"", out.getAsJsonObject("headers").get("Accept").toString());
     }
