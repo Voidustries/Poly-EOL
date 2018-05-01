@@ -10,8 +10,8 @@
   <a href="https://www.codacy.com/app/ponimansky.guy/Poly?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Voidustries/Poly&amp;utm_campaign=Badge_Grade">
     <img src="https://img.shields.io/codacy/grade/0330000d284043f19a126cada035d410.svg?style=flat-square" alt="Codacy grade">
   </a>
-  <a href="https://circleci.com/gh/Voidustries/Poly/tree/Poly-Version-0.1-UNSTABLE">
-    <img src="https://img.shields.io/circleci/project/github/Voidustries/Poly.svg?style=flat-square" alt="CircleCI">
+  <a href="https://circleci.com/gh/Voidustries/Poly/">
+    <img src="https://img.shields.io/circleci/project/github/Voidustries/Poly/feature%2Ftvdb-client.svg?style=flat-square" alt="CircleCI">
   </a>
   <a href="https://github.com/Voidustries/Poly/issues">
     <img src="https://img.shields.io/github/issues-raw/voidustries/poly.svg?style=flat-square" alt="Github Issues">
