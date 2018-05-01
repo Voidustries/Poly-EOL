@@ -39,7 +39,7 @@ class HttpRequestHandlerTest {
         body.addProperty("111", "222");
 
         try {
-            out = test.post("http://httpbin.org", "/post", body);
+            out = test.post("http://eu.httpbin.org", "/post", body);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -60,7 +60,7 @@ class HttpRequestHandlerTest {
         body.addProperty("111", "222");
 
         try {
-            out = test.post("http://httpbin.org", "/post", body, head);
+            out = test.post("http://eu.httpbin.org", "/post", body, head);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -77,7 +77,7 @@ class HttpRequestHandlerTest {
         JsonObject out = new JsonObject();
 
         try {
-            out = test.get("http://httpbin.org", "/get", "111", "222");
+            out = test.get("http://eu.httpbin.org", "/get", "111", "222");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,7 +95,7 @@ class HttpRequestHandlerTest {
         head.addProperty("Accept", "application/json");
 
         try {
-            out = test.get("http://httpbin.org", "/get", head, "111", "222");
+            out = test.get("http://eu.httpbin.org", "/get", head, "111", "222");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -111,7 +111,7 @@ class HttpRequestHandlerTest {
         JsonObject out = new JsonObject();
 
         try {
-            out = test.get("http://httpbin.org", "/get");
+            out = test.get("http://eu.httpbin.org", "/get");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -129,7 +129,7 @@ class HttpRequestHandlerTest {
         head.addProperty("Accept", "application/json");
 
         try {
-            out = test.get("http://httpbin.org", "/get", head);
+            out = test.get("http://eu.httpbin.org", "/get", head);
         } catch (IOException e) {
             e.printStackTrace();
         }
