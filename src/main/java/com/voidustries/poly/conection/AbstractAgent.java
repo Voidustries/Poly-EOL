@@ -2,6 +2,7 @@ package com.voidustries.poly.conection;
 
 import com.google.gson.JsonObject;
 import com.voidustries.poly.Main;
+import com.voidustries.poly.Settings;
 
 import java.util.Locale;
 
