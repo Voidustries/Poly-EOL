@@ -14,9 +14,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
 
-public class SysTray {
+class SysTray {
 
-    public static void systray() {
+    static void launchSysTray() {
 
         if (!SystemTray.isSupported()) {
             Main.LOGGER.warning("SysTray not supported!");
