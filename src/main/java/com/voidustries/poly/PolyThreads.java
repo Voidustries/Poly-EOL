@@ -11,14 +11,14 @@ Creator Comments:
 
 import com.voidustries.poly.gui.GUI;
 
-public class PolyThreads {
+class PolyThreads {
 
-    public static void startThread(int threadNum) {
+    static void startThread(int threadNum) {
 
         switch (threadNum) {
             case 1:
                 Main.LOGGER.entering("SysTray", "Starting Systray...");
-                Thread sysTrayTh = new Thread(SysTray::systray);
+                Thread sysTrayTh = new Thread(SysTray::launchSysTray);
                 sysTrayTh.start();
                 break;
 
@@ -34,7 +34,7 @@ public class PolyThreads {
         }
     }
 
-    public static void startShutdown() {
+    static void startShutdown() {
         Main.LOGGER.exiting("PolyThreads", "Shutting down...");
         System.out.println("Shutting down....");
         System.exit(1);
