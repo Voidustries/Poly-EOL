@@ -1,0 +1,22 @@
+### your site title here
+
+title: Poly
+
+baseurl: /Poly_Project
+sass: 
+    style: compressed
+
+exclude:
+- README.md
+- _site
+- CHANGELOG.md
+- LICENSE
+- deploy-ghpages.sh
+- .circleci
+- CONTRIBUTING.md
+- ISSUE_TEMPLATE.md
+
+include: 
+- _pages
+- downloads
+
