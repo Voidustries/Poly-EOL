@@ -1,0 +1,29 @@
+---
+title: Welcome
+layout: default
+---
+
+
+{% for page in site.pages %}
+{% if page.path contains 'pages' %}
+<div class="list">
+<div class="post-index">
+    <div class="post-image">
+        <a href="{{page.url}}">
+            
+              <i class="fa fa-{{page.icon}} fa-fw"></i>
+            
+        </a>
+    </div>
+    <div class="post-content">
+        <p class="post-index-title"><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></p>
+        <p class="post-detail">{{ page.date | date: '%B %d, %Y' }}
+        </p>
+    </div>
+</div>
+</div>
+
+
+
+{% endif %}
+{% endfor %}
