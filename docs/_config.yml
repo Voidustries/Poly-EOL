@@ -1,8 +1,8 @@
 ### your site title here
 
-title: Poly
+title: poly
 
-baseurl: /poly
+baseurl: /Poly
 sass: 
     style: compressed
 
